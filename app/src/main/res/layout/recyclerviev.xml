@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerview"
+    app:cardBackgroundColor="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin16dp"
+        android:layout_marginEnd="@dimen/margin16dp"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:background="@color/recyclerColor"
+        android:contentDescription="@string/app_name"
+        android:layout_marginRight="@dimen/margin16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize24sp"
+            app:layout_constraintLeft_toRightOf="@+id/imageFlag"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/first_names" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/countryCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize24sp"
+            app:layout_constraintLeft_toRightOf="@+id/imageFlag"
+            app:layout_constraintTop_toBottomOf="@id/countryName"
+            tools:text="@tools:sample/first_names" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/countPeoplesInCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize24sp"
+            app:layout_constraintLeft_toRightOf="@+id/imageFlag"
+            app:layout_constraintTop_toBottomOf="@id/countryCapital"
+            tools:text="@tools:sample/first_names"
+            />
+
+        <ImageView
+            android:id="@+id/imageFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/countPeoplesInCountry"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/countryName"
+            app:layout_constraintVertical_bias="0.272"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            app:layout_constraintTop_toBottomOf="@id/countPeoplesInCountry"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
